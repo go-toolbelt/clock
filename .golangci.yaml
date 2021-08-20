@@ -1,0 +1,32 @@
+# output configuration options
+output:
+  # sorts results by: filepath, line, and column
+  sort-results: true
+
+linters:
+  enable-all: true
+  disable:
+    - exhaustivestruct
+    - funlen
+    - godox
+    - golint # The linter 'golint' is deprecated (since v1.41.0) due to: The repository of the linter has been archived by the owner.  Replaced by revive.
+    - interfacer # The linter 'interfacer' is deprecated (since v1.38.0) due to: The repository of the linter has been archived by the owner.
+    - maligned # The linter 'maligned' is deprecated (since v1.38.0) due to: The repository of the linter has been archived by the owner.  Replaced by govet 'fieldalignment'.
+    - nlreturn
+    - paralleltest
+    - scopelint # The linter 'scopelint' is deprecated (since v1.39.0) due to: The repository of the linter has been deprecated by the owner.  Replaced by exportloopref.
+    - thelper
+    - wrapcheck
+    - wsl
+
+linters-settings:
+  gci:
+    local-prefixes: github.com/go-toolbelt/clock
+
+  goimports:
+    local-prefixes: github.com/go-toolbelt/clock
+
+  revive:
+    rules:
+      - name: if-return
+        disabled: true
